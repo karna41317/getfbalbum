@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Using this free tool you can very easily download all photos from any public Facebook Album.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   	<meta property="og:title" content="Download Photos from Facebook Albums">
+    <meta property="og:description" content="Use this free tool to download photos from Facebook albums in seconds!">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link href="//cdn.jsdelivr.net/pure/0.6.0/pure-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+    <div id="login">
+        <span id="status">Loading...</span>
+        <span class="fb-login-button" data-size="large" data-show-faces="false" scope="public_profile,email" onlogin="checkLoginState();"></span>
+    </div>
+    <div id="about">
+        <h2>Download Photos from a Facebook Album</h2>
+                <form id="form" class="pure-form form-disabled">
+            <input class="pure-input-2-3" id="album_url" type="url" placeholder="Album URL" required>
+            <button type="submit" class="pure-button pure-button-primary">Get Photos</button>
+        </form>
+    </div>
+    <div id="results" style="display: none;">
+        <button id="download_all" class="pure-button pure-button-primary" style="display: none;">Download all <span class="count"></span><span aria-hidden="true" class="icon"></span></button>
+        <div id="list">
+            <img src="assets/ball-triangle.svg" width="50" alt="Loading...">
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="assets/vendor/jquery-2.2.4.min"><\/script>')
+    </script>
+    <script src="assets/app.js"></script>
+</body>
+</html>
